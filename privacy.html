@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F7F8FC">
+  <meta name="description" content="CALUB 개인정보처리방침 — 로컬 저장과 선택적 Google Drive 백업 처리 안내">
+  <title>개인정보처리방침 | CALUB</title>
+  <style>
+    :root{color-scheme:light;font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:#233047;background:#f7f8fc}
+    *{box-sizing:border-box} body{margin:0} .wrap{max-width:840px;margin:auto;padding:40px 24px 72px}
+    a{color:#2856a3;text-underline-offset:3px} .nav{font-size:14px;font-weight:750;margin-bottom:44px} h1{font-size:clamp(29px,5vw,42px);letter-spacing:-.045em;margin:0 0 12px}
+    h2{font-size:21px;letter-spacing:-.025em;margin:42px 0 12px} p,li{font-size:16px;line-height:1.85;color:#4c5a71} ul{padding-left:22px} li{margin:8px 0}
+    .note{background:#eaf1fc;padding:18px 20px;border-radius:16px;margin:24px 0;color:#2a466e;line-height:1.75}
+    .date{font-size:14px;color:#68768c} footer{border-top:1px solid #dfe6f1;padding-top:22px;margin-top:50px;font-size:14px;color:#69768c}
+    a:focus-visible{outline:3px solid #6e9de7;outline-offset:3px}
+  </style>
+</head>
+<body>
+ <main class="wrap">
+  <nav class="nav"><a href="index.html">CALUB 홈</a></nav>
+  <h1>CALUB 개인정보처리방침</h1>
+  <p class="date">작성일: 2026년 11월 20일 · 공개 게시 후 업데이트 가능</p>
+  <p>CALUB(이하 ‘앱’)는 일정, 할 일, 메모, 목표를 관리하는 앱입니다. 아래 내용은 앱에서 처리하는 정보와 이용자의 선택권을 설명합니다. 개인정보 관련 문의는 <a href="mailto:illayer222@gmail.com">illayer222@gmail.com</a>으로 보내주세요.</p>
+  <section><h2>1. 처리하는 정보</h2>
+   <ul>
+    <li><strong>사용자 작성 기록:</strong> 일정, 할 일, 메모, 목표, 목표 진행 기록, 기념일 등 사용자가 앱에 입력한 정보와 앱 설정값.</li>
+    <li><strong>Google Drive 연결 시:</strong> Google 계정 인증에 필요한 권한 및 연결된 계정의 이메일 주소. 앱은 연결 상태 표시와 백업·복원 기능 수행을 위해 이를 사용합니다.</li>
+    <li><strong>사용자가 선택한 기기 내 음악 파일:</strong> 재생을 위해 선택한 파일의 경로와 이름 등 관련 설정을 기기에 보관합니다. 이 음악 파일을 Google Drive 백업 대상으로 업로드하는 기능은 확인된 소스에 포함되어 있지 않습니다.</li>
+   </ul>
+  </section>
+  <section><h2>2. 이용 목적</h2>
+   <p>사용자 기록의 저장·조회·수정, 일정 알림, 홈 화면 위젯 표시, 사용자가 선택한 음악 재생, 선택적 Google Drive 백업·복원 및 앱 설정 유지를 위해 정보를 처리합니다.</p>
+  </section>
+  <section><h2>3. 저장 위치 및 외부 전송</h2>
+   <p>기본적인 일정·메모·목표 데이터는 기기 내 로컬 데이터베이스에 저장됩니다. Google Drive 기능을 사용하지 않는 경우 해당 기록의 클라우드 백업은 수행하지 않습니다.</p>
+   <p>사용자가 Google Drive에 연결하여 백업을 실행하거나 자동 백업을 켠 경우, 일정·할 일·메모·목표·기념일·일부 설정 등의 백업 사본이 사용자의 Google Drive 내 CALUB 전용 비공개 앱 데이터 폴더(<code>appDataFolder</code>)로 전송됩니다. 자동 백업은 활성화되어 있고 계정 연결 및 실행 조건이 충족될 때 일정 간격으로 시도됩니다.</p>
+   <p>백업은 JSON 형식으로 생성되며, 위·변조 확인용 SHA-256 무결성 검사가 사용됩니다. <strong>이 검사는 암호화와 다르며, 앱이 백업 내용을 자체적으로 추가 암호화하지 않습니다.</strong> Google 서비스를 통한 전송과 저장에는 Google의 보안 체계가 적용됩니다.</p>
+  </section>
+  <section><h2>4. Google 권한 및 제3자 서비스</h2>
+   <p>앱은 Google 로그인과 Google Drive API를 이용합니다. 요청 권한은 <code>https://www.googleapis.com/auth/drive.appdata</code>이며, 이 권한을 통해 CALUB 전용 앱 데이터 폴더에 접근합니다. 사용자의 Google Drive 전체 일반 파일을 읽거나 수정하기 위한 권한은 요청하지 않습니다.</p>
+   <p>Google 서비스 사용에는 Google의 개인정보처리방침이 적용될 수 있습니다. <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google 개인정보처리방침</a></p>
+  </section>
+  <section><h2>5. 보관 기간과 삭제</h2>
+   <p>기기 내 데이터는 사용자가 기록을 수정·삭제하거나 앱 데이터가 제거되기 전까지 저장될 수 있습니다. 앱 내 기록을 삭제하더라도 이전에 생성된 Google Drive 백업에는 해당 기록이 남아 있을 수 있습니다.</p>
+   <p>Google Drive 백업은 새 파일을 업로드하고 다운로드 검증까지 완료한 뒤 최신 백업을 우선 보존하며 오래된 백업 파일을 정리하도록 구현되어 있습니다. 네트워크 오류 등으로 과거 백업이 더 남을 수 있습니다.</p>
+   <p>앱 내 계정 연결 해제는 기기에서 Google 계정 로그인을 종료하는 동작이며, Google Drive에 이미 저장된 백업을 자동으로 삭제하는 동작은 아닙니다. Google Drive 전용 앱 데이터의 삭제 또는 개인정보 관련 요청은 아래 고객지원 이메일로 문의하실 수 있습니다.</p>
+  </section>
+  <section><h2>6. 외부 공유 및 광고·분석</h2>
+   <p>확인된 앱 의존성 및 소스에는 제3자 광고 네트워크나 별도의 사용 행태 분석 SDK가 포함되어 있지 않습니다. CALUB는 이용자가 선택한 Google Drive 백업·복원과 같은 기능 제공 목적 외에 사용자 작성 기록을 자체 운영 서버로 전송하는 기능을 확인하지 않았습니다. 향후 처리 방식이 변경될 경우 본 방침을 갱신합니다.</p>
+  </section>
+  <section><h2>7. 이용자의 선택 및 권리</h2>
+   <p>사용자는 앱에서 자신의 기록을 확인·수정·삭제할 수 있으며, Google Drive 연결 및 자동 백업 사용 여부를 선택할 수 있습니다. 개인정보 처리 관련 문의, 정정, 삭제에 대한 요청은 고객지원 이메일로 접수할 수 있습니다.</p>
+  </section>
+  <section><h2>8. 알림 및 접근 권한</h2>
+   <p>Android 앱은 일정 알림 표시, 정확한 시간의 알림 제공, 기기 재시작 후 알림 재등록 등을 위해 관련 운영체제 권한을 사용할 수 있습니다. 앱의 주요 일정 관리 기능은 Google 계정에 연결하지 않아도 사용할 수 있습니다.</p>
+  </section>
+  <section><h2>9. 문의처 및 정책 변경</h2>
+   <p>앱 이름: CALUB<br>고객지원 및 개인정보 문의: <a href="mailto:illayer222@gmail.com">illayer222@gmail.com</a></p>
+   <p>정보 처리 방식 또는 관련 정책이 변경되면 이 페이지를 갱신하고 필요한 경우 앱 내 또는 관련 화면을 통해 안내합니다.</p>
+  </section>
+  <footer>© CALUB · <a href="index.html">홈으로</a></footer>
+ </main>
+</body>
+</html>
